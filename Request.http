@@ -1,0 +1,41 @@
+# Listar mascotas registradas en el sistema
+GET http://localhost:8080/mascota/all
+
+###
+
+# Crear una mascota
+
+POST http://localhost:8080/mascota/add
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Luna
+&raza=chiquita
+&propietario=Heidi
+
+###
+# Editar mascota
+
+PUT http://localhost:8080/mascota/edit
+Content-Type: application/x-www-form-urlencoded
+
+id=1
+&nombre=Lucho
+&raza=chiquito
+&propietario=Carlos
+###
+
+# Ver mascota por id
+GET http://localhost:8080/mascota/ver/2
+
+###
+
+# Borrar mascota por id
+DELETE http://localhost:8080/mascota/del
+Content-Type: application/x-www-form-urlencoded
+
+id=1
+
+###
+
+# Ver resultado de una query SQL
+GET http://localhost:8080/mascota/get/report
